@@ -12,6 +12,8 @@ import {
   UsersIcon,
   SparklesIcon,
   BadgeCheckIcon,
+  VideoCameraIcon,
+  PencilIcon,
 } from '@heroicons/react/outline';
 import UserCard from './UserCard';
 
@@ -82,15 +84,17 @@ const Sidebar = () => {
       <UserCard />
       <div className="w-full mt-2">
         <SidebarLink href="/" icon={HomeIcon} label="Home" onClick={(e) => handleLinkClick(e, '/')} />
-        <SidebarLink href="/profile" icon={UserCircleIcon} label="My Profile" onClick={(e) => handleLinkClick(e, '/profile')} />
+        {/* <SidebarLink href="/user/profile" icon={UserCircleIcon} label="My Profile" /> */}
         <SidebarLink href="/inbox" icon={InboxIcon} label="Inbox" onClick={(e) => handleLinkClick(e, '/inbox')} />
+        <SidebarLink href="/videos" icon={VideoCameraIcon} label="Video" onClick={(e) => handleLinkClick(e, '/videos')} />
+        <SidebarLink href="/posts" icon={PencilIcon} label="Post" onClick={(e) => handleLinkClick(e, '/posts')} />
         <SidebarLink href="/connections" icon={UserGroupIcon} label="My Connections" onClick={(e) => handleLinkClick(e, '/connections')} />
         <SidebarLink href="/feed" icon={StarIcon} label="Feed" onClick={(e) => handleLinkClick(e, '/feed')} />
         <SidebarLink href="/projects" icon={ClipboardCheckIcon} label="My Projects" onClick={(e) => handleLinkClick(e, '/projects')} />
         <SidebarLink href="/events" icon={CalendarIcon} label="Events" onClick={(e) => handleLinkClick(e, '/events')} />
         <SidebarLink href="/achievements" icon={BadgeCheckIcon} label="My Achievements" onClick={(e) => handleLinkClick(e, '/achievements')} />
         <SidebarLink href="/collaborations" icon={UsersIcon} label="Collaborations" onClick={(e) => handleLinkClick(e, '/collaborations')} />
-      </div>
+        </div>
       <div style={{ ...styles.SectionTitle, textAlign: 'left' }}>My Contents</div>
       <div className="w-full">
         <SidebarLink href="/art" icon={SparklesIcon} label="Art Enthusiasts" onClick={(e) => handleLinkClick(e, '/art')} />

@@ -1,11 +1,14 @@
+// src/app/components/UserCard.jsx
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const styles = {
   Card: {
+    cursor: 'pointer',
     width: '250px',
     padding: '16px',
-    backgroundColor: '#f5f5f5', // Light grey background
-
+    backgroundColor: '#f5f5f5',
     borderRadius: '10px',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     display: 'flex',
@@ -69,8 +72,14 @@ const defaultProps = {
 };
 
 const UserCard = ({ name, handle, image, stats = defaultProps.stats }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/user/profile'); // Redirect to the profile page
+  };
+
   return (
-    <div style={styles.Card}>
+    <div style={styles.Card} onClick={handleClick}>
       <div
         style={{
           ...styles.ImageContainer,
