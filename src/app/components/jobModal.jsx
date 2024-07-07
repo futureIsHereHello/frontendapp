@@ -74,7 +74,7 @@ const JobModal = ({ jobId, onClose }) => {
       <div style={styles.ModalContent} onClick={(e) => e.stopPropagation()}>
         <div style={styles.JobDetails}>
           <div style={styles.Header}>
-            {/* <h2>{job.role}</h2> */}
+            <h2>{job.role}</h2>
             <span style={styles.CloseButton} onClick={onClose}>&times;</span>
           </div>
           <p><strong>Company:</strong> {job.company_name}</p>
